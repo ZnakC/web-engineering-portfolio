@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+	    <link href="styles/index.css" rel="stylesheet"/>
+        <script src="./jquery.js"></script>
+    </head>
+    <body class="full">
+        <div class="wrapper">
+            <header>
+                <div id="header"></div>
+            </header>
+            
+            <div class="body">
+                <h1>Welcome</h1>
+                <div class="parallax1"></div>
+                <p class="text">On this site you can find information about my SQL project</p>
+                <div class="button_container">
+                    <button class="button" onclick="viewMore('/Project.html')">Project</button>
+                </div>
+
+                <div class="parallax2"></div>
+                <p class="text">Also, on this site you can find information about me</p>
+                <div class="button_container">
+                    <button class="button" onclick="viewMore('AboutMe.html')">About Me</button>
+                </div>
+
+                <div class="parallax3"></div>
+                <p class="text">And on this site you can find contact page</p>
+                <div class="button_container">
+                    <button class="button" onclick="viewMore('Contact.html')">Contact page</button>
+                </div>
+
+                <div class="parallax4"></div>
+            </div>
+            
+            <footer>
+                <div id="footer"></div>
+            </footer>
+        </div>
+    </body>
+</html>
+
+<script>
+    $(function(){
+        $("#header").load("Header.html"); 
+    });
+
+    $(function(){
+        $("#footer").load("Footer.html"); 
+    });
+    
+    function viewMore(url){
+        window.location.href = url;
+    }
+</script>

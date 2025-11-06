@@ -1,0 +1,301 @@
+.container{
+    background-color: #006d3c;
+    color: #f5f7d7;
+}
+
+.card{
+    position: relative;
+    background-color: #018148;
+    width: 100%;
+    height: 340px;
+    display: flex;
+    align-items: center;
+}
+
+.card:hover{
+    background-color: #01663b; 
+}
+
+.card::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #2f4f4f);
+}
+
+.photo{
+    width: 450px;
+    height: 300px;
+    border-radius: 10%;
+    margin: 40px 20px 40px 40px;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .photo{
+    transform: scale(1.05); 
+}
+
+.text{
+    margin-left: 40px;
+    z-index: 1; 
+}
+
+.name, .specialty{
+    font-size: 50px; 
+    font-weight: bold;
+    margin: 0;
+}
+
+.specialty{
+    font-size: 20px;
+}
+
+.card:hover .name,
+.card:hover .specialty{
+    color: #ffdd57;
+    transform: scale(1.1);
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.tittle_hobby{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 100px 50px 100px 50px;
+}
+
+.hobbies{
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.hobby{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 10px;
+}
+
+.hobby i{
+    font-size: 60px; 
+    margin-bottom: 10px; 
+}
+
+.hobby p{
+    font-size: 18px;
+}
+
+.tittle_projects{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 100px 50px 0 50px;
+}
+
+.projects{
+    width: 100%;
+    position: relative;
+    padding: 300px 0 100px 0;
+}
+
+.notebook_wrapper{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .notebook_container{
+    position: relative;
+    width: 900px; 
+  }
+  
+  .notebook{
+    width: 100%;
+    display: block;
+  }
+
+.first_project{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    width: 370px; 
+    height: 240px; 
+    padding-left: 30px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    overflow-y: auto;
+    margin: 20px 10px 20px 10px;
+}
+
+li{
+    list-style: disc;
+}
+
+.module{
+    font-weight: bold;
+    padding: 5px;
+}
+
+.topic{
+    font-weight: bold;
+    padding: 8px;
+    margin: 10px 15px 10px 15px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 64, 0, 0.5);
+}
+
+.second_project{
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    width: 370px; 
+    height: 240px; 
+    padding-left: 30px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    overflow-y: auto;
+    margin: 20px 10px 20px 10px;
+}
+
+.third_project{
+    position: absolute;
+    top: 40px;
+    left: 450px;
+    width: 370px; 
+    height: 260px; 
+    padding-left: 30px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    overflow-y: auto;
+    margin: 20px 10px 20px 20px;
+}
+
+.third_project .topic, .second_project .topic, .fourth_project .topic{
+    margin-bottom: 15px;
+}
+
+.fourth_project{
+    position: absolute;
+    top: 300px;
+    left: 450px;
+    width: 370px; 
+    height: 340px; 
+    padding-left: 30px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    overflow-y: auto;
+    margin: 20px 10px 20px 20px;
+}
+
+.first_project i, .second_project i, .third_project i, .fourth_project i{
+    font-size: 60px;
+    float: right;
+}
+
+.first_project img{
+    font-size: 60px;
+    float: right;
+}
+
+.flower{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 0; 
+}
+
+.flower img{
+    width: 100px;
+    position: absolute; 
+    z-index: -1;
+}
+
+.flower1{
+    top: 120px;
+    left: 250px;
+}
+
+.flower2{
+    top: 550px;
+    left: 10px;
+}
+
+.flower3{
+    top: 1100px;
+    left: 400px;
+}
+
+.flower4{
+    top: 200px;
+    left: 700px;
+}
+
+.flower5{
+    top: 120px;
+    left: 1000px;
+}
+
+.flower6{
+    top: 850px;
+    left: 1070px;
+}
+
+.flower7{
+    top: 1050px;
+    left: 800px;
+}
+
+.flower8{
+    top: 1000px;
+    left: 20px;
+}
+
+.star{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 0; 
+}
+
+.star img{
+    width: 50px;
+    position: absolute; 
+    z-index: -1;
+}
+
+.star1{
+    top: 230px;
+    left: 50px;
+}
+
+.star2{
+    top: 550px;
+    left: 1080px;
+}
+
+.star3{
+    top: 1200px;
+    left: 150px;
+}
+
+.star4{
+    top: 1150px;
+    left: 1000px;
+}
+
+.star5{
+    top: 90px;
+    left: 500px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+	      <link href="styles/Project.css" rel="stylesheet"/>
+        <script src="./jquery.js"></script>
+    </head>
+    <body class="full">
+        <div class="wrapper">
+            <header>
+                <div id="header"></div>
+                <p class="title">SQL</p>
+            </header>
+
+            <div class="image-container">
+              <img src="images/city.jpg" alt="City"/>
+              <p class="explanation">Hello, I am Zhanna Chorna, an exchange bachelor student in the Technology program. This project was created in collaboration with my friend Anastasiia Nikitina. In this project, we developed a database designed to manage orders, track warehouse materials, monitor material usage in construction work, and provide information about suppliers, teams, and projects.</p>
+            </div>
+            
+            <div class="slides-wrapper1">
+              <div class="slide1">
+                <img src="images/average_salary_summary.png" alt="average salary summary" id="img"/>
+              </div>
+            
+              <div class="slide2">
+                <h3>View</h3>
+                <ul> 
+                  <li>average salary of each category of employees</li>
+                  <li>materials by periods of use</li>
+                  <li>automatically sets the status of the order and the deadline at the end of work</li>
+                  <li>order reports</li>
+                  <li>profit or expenses of the firm</li>
+                </ul>
+              </div>
+            </div>
+            
+          <div class="slides-wrapper2">
+            <div class="slide3">
+              <h3>List of database functions: </h3>
+              <ul>
+                <li>the system automatically determines the responsible team for the new job</li>
+                <li>displays the profit or expenses of the campaign and calculates the average salary of each category of employees</li>
+                <li>automatically sets the status of the order and the deadline at the end of work</li>
+                <li>checks the correctness of the date entry</li>
+                <li>calculates the number and cost of materials used</li>
+                <li>updates stocks in the warehouse after each delivery</li>
+                <li>controls the minimum balances of materials and creates appropriate views for reporting</li>
+                <li>such as a report on the use of materials for periods of time</li>
+                <li>the price dynamics of materials from different suppliers and a general report of orders</li>
+                <li>including their cost, duration and materials used</li>
+              </ul>
+            </div>
+
+            <div class="slide4">
+              <img src="images/functions.png" alt="functions"/>
+            </div>
+          </div>
+
+          <div class="slide5">
+            <img src="images/ERD.png" alt="ERD"/>
+          </div>
+
+            <footer>
+                <div id="footer"></div>
+            </footer>
+        </div>
+    </body>
+</html>
+
+<script>
+  $(function(){
+    $("#header").load("Header.html"); 
+  });
+
+  $(function(){
+    $("#footer").load("Footer.html"); 
+  });
+  
+  $(document).ready(function(){
+    let i = 0;
+    const images=[
+      "images/average_salary_summary.png",
+      "images/material_usage_report.png",
+      "images/needed_materials.png",
+      "images/order_summary.png",
+      "images/revenue_expenses.png"
+    ];
+
+    function showSlides() {
+      $("#img").attr("src", images[i]);
+      i++;
+      if (i >= images.length) {
+        i = 0;
+      }
+      setTimeout(showSlides, 4000); 
+    }
+
+    showSlides();
+  });
+</script>

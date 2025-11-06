@@ -1,0 +1,92 @@
+
+/*----------header----------*/
+
+
+.top-layer{
+    background-color: #006d3c;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.logo{
+    width: 100px;
+    float: left;
+    padding: 10px;
+}
+
+.header ul{
+    display: flex; 
+    justify-content: space-around; 
+    list-style: none;
+}
+
+.header li{
+    position: relative;
+    font-size: 20px;
+}
+
+.header a{
+    display: inline-block;
+    padding: 50px 30px;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.full{
+    background-color: #a3d46f;
+}
+
+.wrapper{
+    width: 100%;
+    min-width: 900px;
+    max-width: 1200px;
+    margin: 20px auto; 
+    padding: 0 auto;
+    background-color: #f5f7d7;
+    border-radius: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #13694d;
+}
+
+.title{
+    font-size: 40px;
+    padding: 40px;
+    text-align: center;
+    background-color: #006d3c;
+    color: #f5f7d7;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black, 0 0 10px #4CAF50, 0 0 5px #2E7D32;
+}
+
+h3{
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+
+h1{
+    font-size: 40px;
+    padding: 40px;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 10px #4CAF50, 0 0 5px #2E7D32;
+}
+
+.paragraph{
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.6), 0 0 8px #4CAF50, 0 0 4px #2E7D32;
+    font-size: 45px;
+    padding: 45px;
+    text-align: center;
+    color: #13694d;
+    font-weight: bold;
+}
+
+/*----------footer----------*/
+
+
+.footer p{
+    padding: 50px 30px;
+    background-color: #ef7355;
+    text-align: right;
+    border-radius: 0px 0px 20px 20px;
+    color: white;
+}

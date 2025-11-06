@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+	    <link href="styles/Contact.css" rel="stylesheet"/>
+        <script src="./jquery.js"></script>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    </head>
+    <body class="full">
+        <form id="contact-form" action="mailto:zhannachorna@gmail.com?subject=formresult" method="post" enctype="text/plain">
+            <div class="wrapper">
+                <header>
+                    <div id="header"></div>
+                    <p class="title">Contact</p>
+                </header>
+                
+                <div class="fields">
+                    <p id="error-message"></p>
+                    <div class="phone_container">
+                        <img src="images/phone.webp" alt="phone" class="img_phone"/>
+                        <div id="display"></div>
+                        <audio id="audio" src="images/zvuk-najatiya-knopki.mp3"></audio>
+                        <div class="numbers_container">
+                            <div class="number" id="number1" onclick="playSound('audio')"></div>
+                            <div class="number" id="number2" onclick="playSound('audio')"></div>
+                            <div class="number" id="number3" onclick="playSound('audio')"></div>
+                            <div class="number" id="number4" onclick="playSound('audio')"></div>
+                            <div class="number" id="number5" onclick="playSound('audio')"></div>
+                            <div class="number" id="number6" onclick="playSound('audio')"></div>
+                            <div class="number" id="number7" onclick="playSound('audio')"></div>
+                            <div class="number" id="number8" onclick="playSound('audio')"></div>
+                            <div class="number" id="number9" onclick="playSound('audio')"></div>
+                            <div class="number" id="number0" onclick="playSound('audio')"></div>
+                        </div>
+                        <div class="buttons_container">
+                            <div id="ok"></div>
+                            <div id="delete"></div>
+                        </div>
+                    </div>
+
+                    <p class="instruction">Fields with <span class="specialchar">&#42;</span> are mandatory</p>
+                    <div class="input-box">
+                        <label for="name">Name:<span class="specialchar">&#42;</span></label>
+                        <i class='bx bx-user'></i>
+                        <input type="text" name="name"  id="name"/>
+                    </div>
+                    <img src="images/arrow.gif" alt="arrow" class="arrow"/>
+                    <div class="input-box">
+                        <label for="email">Email:<span class="specialchar">&#42;</span></label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="text" name="email" id="email"/>
+                    </div>
+                    <div class="input-box">
+                        <label for="name">Phone number:</label>
+                        <i class='bx bx-phone'></i>
+                        <input type="text" name="phone" id="phone" readonly/>
+                    </div>
+                    <div class="input-box">
+                        <label for="question">Question:<span class="specialchar">&#42;</span></label>
+                        <i class='bx bx-question-mark'></i>
+                        <input type="text" name="question" id="question"/>
+                    </div>
+                    <div class="buttons">
+                        <input type="submit" value="Send Mail" class="send"/>
+                        <input type="reset" value="Reset" class="reset"/>
+                    </div>
+                </div>
+
+                <footer>
+                    <div id="footer"></div>
+                </footer>
+            </div>
+        </form>
+    </body>
+</html>
+
+<script>
+    $(function(){
+        $("#header").load("Header.html"); 
+    });
+
+    $(function(){
+        $("#footer").load("Footer.html"); 
+    });
+
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const form = document.getElementById("contact-form");
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const question = document.getElementById("question").value.trim();
+        const errorMsg = document.getElementById("error-message");
+    
+        if (!name || !email || !question){
+            event.preventDefault();
+            errorMsg.textContent = "Please fill in all fields.";
+        }else if(!email.includes("@") || !email.includes(".")){
+            event.preventDefault();
+            errorMsg.textContent = "Please enter a valid email address.";
+        }else if(!question.match(/^[a-zA-Z0-9\s.,!?]+$/)){
+            event.preventDefault();
+            errorMsg.textContent = "Please enter a valid question.";
+        }else{
+            errorMsg.textContent = ""; 
+            form.submit();
+        }
+    });
+
+    function playSound(audio) {
+        var song = document.getElementById(audio);
+        song.play();
+    }
+
+
+
+    $(document).ready(function(){
+        let input = '';
+            
+        function addToDisplay(){
+            $('#display').html(input);
+        }
+
+        $('.number').on('click', function(){
+            $('#display').html('');
+            if($(this).attr('id')=='number1' && input.length<9){
+                input+='1';
+                addToDisplay();
+            }else if($(this).attr('id')=='number2' && input.length<9){
+                input+='2';
+                addToDisplay();
+            }else if($(this).attr('id')=='number3' && input.length<9){
+                input+='3';
+                addToDisplay();
+            }else if($(this).attr('id')=='number4' && input.length<9){
+                input+='4';
+                addToDisplay();
+            }else if($(this).attr('id')=='number5' && input.length<9){
+                input+='5';
+                addToDisplay();
+            }else if($(this).attr('id')=='number6' && input.length<9){
+                input+='6';
+                addToDisplay();
+            }else if($(this).attr('id')=='number7' && input.length<9){
+                input+='7';
+                addToDisplay();
+            }else if($(this).attr('id')=='number8' && input.length<9){
+                input+='8';
+                addToDisplay();
+            }else if($(this).attr('id')=='number9' && input.length<9){
+                input+='9';
+                addToDisplay();
+            }else if($(this).attr('id')=='number0' && input.length<9){
+                input+='0';
+                addToDisplay();
+            }else
+                addToDisplay();
+        });
+
+        $('#delete').on('click', function(){
+            $('#display').html('');
+            input="";
+        });
+
+        $('#ok').on('click', function(){
+            $('#display').html('');
+            $('#phone').val(input);
+        });
+    });
+</script>

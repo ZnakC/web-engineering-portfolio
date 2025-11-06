@@ -1,0 +1,56 @@
+.body{
+    background-color: #006d3c;
+    color: #f5f7d7;
+}
+
+.text{
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 40px;
+    margin-top: 50px;
+}
+
+.button_container{
+    text-align: center;
+}
+
+.button{
+    text-align: center;
+    width: 200px;
+    background-color: #f5f7d7;
+    color: #006d3c;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.button:active{
+    background-color: #b3e283;
+}
+
+.parallax1, .parallax2, .parallax3, .parallax4{
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1{
+    background-image: url("/images/top-forest.jpg");
+}
+
+.parallax2{
+    background-image: url("/images/forest.jpeg");
+}
+
+.parallax3{
+    background-image: url("/images/bottom-forest.webp");
+}
+
+.parallax4{
+    background-image: url("/images/last-forest.png");
+}

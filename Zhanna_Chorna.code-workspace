@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Lab/Lab8"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Zhanna_Chorna"
+	}
+}
