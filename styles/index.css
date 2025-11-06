@@ -40,17 +40,17 @@
 }
 
 .parallax1{
-    background-image: url("/images/top-forest.jpg");
+    background-image: url("images/top-forest.jpg");
 }
 
 .parallax2{
-    background-image: url("/images/forest.jpeg");
+    background-image: url("images/forest.jpeg");
 }
 
 .parallax3{
-    background-image: url("/images/bottom-forest.webp");
+    background-image: url("images/bottom-forest.webp");
 }
 
 .parallax4{
-    background-image: url("/images/last-forest.png");
+    background-image: url("images/last-forest.png");
 }
